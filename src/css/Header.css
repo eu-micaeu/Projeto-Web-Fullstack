@@ -5,10 +5,15 @@ header{
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    background-color: #333;
     color: white;
-    font-size: 1.5rem;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid #F24822;
+
+}
+
+header h1{
+
+    color: #F24822;
+    font-size: 2.5em;
 
 }
