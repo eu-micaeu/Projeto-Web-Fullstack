@@ -6,9 +6,7 @@ function Header(){
 
         <header>
 
-            <h1>dailyBask</h1>
-
-            <img src="./icons/logo.png" alt="logo" width={50} height={50}/>
+            <h1>aboutBask</h1>
 
         </header>
 
