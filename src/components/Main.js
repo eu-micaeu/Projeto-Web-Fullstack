@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../css/Main.css';
-import { TextField, Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material';
+import { TextField, Button, Dialog, DialogActions, DialogContent, DialogTitle, CircularProgress } from '@mui/material';
 
 const Main = () => {
     const [times, setTimes] = useState([]);
@@ -47,7 +47,13 @@ const Main = () => {
         setTimeSelecionado(null);
     };
 
-    if (carregando) return <div>Carregando...</div>;
+    if (carregando) {
+        return (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}>
+                <CircularProgress style={{ color: '#F24822' }} />
+            </div>
+        );
+    }
 
     if (erro) return <div>Erro: {erro.message}</div>;
 
@@ -90,9 +96,24 @@ const Main = () => {
             </ul>
 
             {timeSelecionado && (
-                <Dialog open={openDialog} onClose={handleCloseDialog}>
-                    <DialogTitle>{timeSelecionado.name}</DialogTitle>
-                    <DialogContent>
+                <Dialog
+                    open={openDialog}
+                    onClose={handleCloseDialog}
+                >
+                    <DialogTitle style={
+                        {
+                            textAlign: 'center',
+                        }
+                    }>{timeSelecionado.name}</DialogTitle>
+                    <DialogContent
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',  // Centraliza os itens horizontalmente
+                            justifyContent: 'center',  // Centraliza os itens verticalmente
+                            textAlign: 'center',  // Opcional: centraliza o texto
+                        }}
+                    >
                         <img src={timeSelecionado.logo} alt={timeSelecionado.name} width={100} height={100} />
                         <p><strong>Full Name:</strong> {timeSelecionado.name}</p>
                         <p><strong>City:</strong> {timeSelecionado.city}</p>
@@ -104,6 +125,7 @@ const Main = () => {
                         </Button>
                     </DialogActions>
                 </Dialog>
+
             )}
         </main>
     );
