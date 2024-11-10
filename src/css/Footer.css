@@ -8,5 +8,9 @@ footer{
     color: white;
     font-weight: bold;
     border-top: 5px solid #F24822;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    left: 0;
 
 }
