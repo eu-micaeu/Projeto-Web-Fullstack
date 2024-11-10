@@ -7,16 +7,17 @@ import { Container } from '@mui/material';
 function App() {
 
   return (
+    
+      <Container maxWidth="lg"> 
 
-    <Container maxWidth="lg"> 
+        <Header />
 
-      <Header />
+        <Main />
 
-      <Main />
+        <Footer />
 
-      <Footer />
+      </Container>
 
-    </Container>
 
   );
   

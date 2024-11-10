@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import '../css/Main.css';
-import { TextField, Button, Dialog, DialogActions, DialogContent, DialogTitle, CircularProgress } from '@mui/material';
+import { TextField, CircularProgress, Button } from '@mui/material';
+import Context from '../context/Context';
+import PopUp from './PopUp';
 
 const Main = () => {
 
@@ -34,7 +36,7 @@ const Main = () => {
 
         };
 
-        
+
         try {
             //tentativa de requisição passando como parametros a url e options
             const response = await fetch(url, options);
@@ -60,7 +62,7 @@ const Main = () => {
         }
 
     };
-    
+
     function pesquisarTime() {
         // consição que verifica se o tero de pesquisa esta vazio
         if (timePesquisado.trim() === '') {
@@ -68,7 +70,7 @@ const Main = () => {
             buscarTimes();
 
             return;
-        //verifica se o termo de pesquisa tem menos de 3 caracteres
+            //verifica se o termo de pesquisa tem menos de 3 caracteres
         } else if (timePesquisado.trim().length < 3) {
 
             alert("O termo de busca deve ter pelo menos 3 caracteres");
@@ -127,15 +129,7 @@ const Main = () => {
 
         setAbrirDialogo(true);
 
-    },[]);
-
-    const fecharPopUp = useCallback(() => {
-
-        setAbrirDialogo(false);
-
-        setTimeSelecionado(null);
-
-    },[]);
+    }, []);
 
     if (carregando) {
 
@@ -172,6 +166,7 @@ const Main = () => {
                     onChange={(e) => setTimePesquisado(e.target.value)}
 
                 />
+                
                 <Button
 
                     variant="contained"
@@ -200,69 +195,29 @@ const Main = () => {
                 <ul>
 
                     {times
+
                         .filter((time) => time.nbaFranchise === true && time.name !== 'Home Team Stephen A')
+
                         .map((time) => (
+
                             <li key={time.id} onClick={() => abrirPopUp(time)}>
 
                                 <img src={time.logo} alt={time.name} width={75} height={75} />
 
                             </li>
+
                         ))}
 
                 </ul>
 
             </div>
 
-            {timeSelecionado && (
+            <Context.Provider value={[timeSelecionado, abrirDialogo, setAbrirDialogo, setTimePesquisado]}>
 
-                <Dialog
-                    open={abrirDialogo}
-                    onClose={fecharPopUp}
-                >
+                <PopUp />
 
-                    <DialogTitle style={
+            </Context.Provider>
 
-                        {
-                            textAlign: 'center',
-                        }
-                    }>{timeSelecionado.name}
-                    
-                    </DialogTitle>
-
-                    <DialogContent
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center', 
-                            justifyContent: 'center',
-                            textAlign: 'center', 
-                        }}
-                    >
-
-                        <img src={timeSelecionado.logo} alt={timeSelecionado.name} width={100} height={100} />
-
-                        <p><strong>Full Name:</strong> {timeSelecionado.name}</p>
-
-                        <p><strong>City:</strong> {timeSelecionado.city}</p>
-
-                        <p><strong>Conference:</strong> {timeSelecionado.leagues.standard.conference}</p>
-
-                    </DialogContent>
-
-                    <DialogActions>
-
-                        <Button onClick={fecharPopUp} color="primary">
-
-                            Fechar
-
-                        </Button>
-
-                    </DialogActions>
-
-                </Dialog>
-
-            )}
-            
         </main>
 
     );
