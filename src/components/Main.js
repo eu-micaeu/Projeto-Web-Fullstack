@@ -92,21 +92,20 @@ const Main = () => {
         };
 
         try {
-
+            //tentaiva de fazer uma requisição para a api
             fetch(url, options)
 
-
-                .then((response) => response.json())
+                .then((response) => response.json())// Converte a resposta da API para JSON
 
                 .then((result) => {
 
-                    setTimes(result.response || []);
+                    setTimes(result.response || []);// Atualiza o estado times com os dados recebidos
 
-                    setErro(null);
+                    setErro(null);// Reseta o estado de erro, já que a requisição foi bem-sucedida
 
                 })
 
-                .catch((error) => setErro('Erro ao buscar dados'));
+                .catch((error) => setErro('Erro ao buscar dados'));//Caso ocorra um erro na requisição, é atualizado o estado do erro
 
         } catch (error) {
 
