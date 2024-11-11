@@ -4,6 +4,12 @@ main{
 
 }
 
+main h3{
+
+    color: #F24822;
+
+}
+
 main #searchBox {
 
     margin: 20px 0;

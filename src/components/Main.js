@@ -151,6 +151,8 @@ const Main = () => {
 
         <main>
 
+            <h3>Pesquise e veja sobre os times da NBA!</h3>
+
             <div id="searchBox">
 
                 <TextField

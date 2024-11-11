@@ -8,7 +8,13 @@ function App() {
 
   return (
     
-      <Container maxWidth="lg"> 
+      <Container 
+      maxWidth="lg"
+      style={{
+
+        userSelect: 'none',
+
+      }}> 
 
         <Header />
 
