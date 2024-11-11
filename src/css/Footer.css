@@ -4,10 +4,10 @@ footer{
     justify-content: space-between;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 5px;
     color: white;
     font-weight: bold;
-    border-top: 5px solid #F24822;
+    border-top: 2px solid #F24822;
     position: fixed;
     bottom: 0;
     width: 100vw;
