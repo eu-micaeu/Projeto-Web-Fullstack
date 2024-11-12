@@ -6,7 +6,7 @@ function Footer(){
 
         <footer>
 
-            <img src="./icons/logo.png" alt="logo" width={50} height={50}/>
+            <img src="./icons/logo.png" alt="logo" width={36} height={36}/>
 
         </footer>
 
