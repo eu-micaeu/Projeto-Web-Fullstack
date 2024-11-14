@@ -151,7 +151,7 @@ const Main = () => {
 
         <main>
 
-            <h3>Pesquise e veja sobre os times da NBA!</h3>
+            <p>*Pesquise e clique nos times para saber a sua média de pontos, assistências e rebotes na temporada passada!</p>
 
             <div id="searchBox">
 

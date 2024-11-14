@@ -4,9 +4,11 @@ main{
 
 }
 
-main h3{
+main p{
 
     color: #F24822;
+
+    font-weight: bold;
 
 }
 
