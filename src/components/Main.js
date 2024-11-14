@@ -153,6 +153,8 @@ const Main = () => {
 
             <p>*Pesquise e clique nos times para saber a sua média de pontos, assistências e rebotes na temporada passada!</p>
 
+            <p>*OBS: A aplicação pode ter algumas funcionalidades comprometidas devido ao plano gratuito que estamos utilizando da API, em que limita 10 requisições por minuto.</p>
+
             <div id="searchBox">
 
                 <TextField
