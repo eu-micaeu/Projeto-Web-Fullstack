@@ -6,21 +6,10 @@ footer {
     padding: 20px;
     font-weight: bold;
     border-top: 2px solid #f24822;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    z-index: 1000;
-    left: 0;
 
 }
 
-.footer-container {
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-}
 
 footer p {
     margin: 0;
