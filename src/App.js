@@ -13,6 +13,8 @@ function App() {
       style={{
 
         userSelect: 'none',
+        display: 'flex',
+        flexDirection: 'column',
 
       }}> 
 
