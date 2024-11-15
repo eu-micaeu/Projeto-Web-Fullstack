@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import '../css/Main.css';
+import './Main.css';
 import { TextField, CircularProgress, Button } from '@mui/material';
-import Context from '../context/Context';
-import PopUp from './PopUp';
+import Context from '../../context/Context';
+import PopUp from '../PopUp/PopUp';
 
 const Main = () => {
 

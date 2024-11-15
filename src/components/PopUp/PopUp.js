@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useState, useEffect } from 'react';
 import { Dialog, DialogContent, DialogTitle, CircularProgress } from '@mui/material';
-import Context from '../context/Context';
-import '../css/PopUp.css';
+import Context from '../../context/Context';
+import './PopUp.css';
 
 function PopUp() {
 
@@ -82,6 +82,7 @@ function PopUp() {
                             padding: 20,
                             fontFamily: 'Segoe UI',
                             color: '#333',
+                            width: '40vw',
                         }
                     }}
                 >
@@ -102,7 +103,7 @@ function PopUp() {
 
                         <p>{timeSelecionado.code}</p>
                         <p className='cidadeConferencia'>
-                            {timeSelecionado.city} - {timeSelecionado.leagues.standard.conference} - {timeSelecionado.leagues.standard.division}
+                            {timeSelecionado.leagues.standard.conference} / {timeSelecionado.leagues.standard.division}
                         </p>
 
                         {carregando && 
@@ -123,7 +124,7 @@ function PopUp() {
 
                                 <p><strong>Jogos:</strong> {estatisticas.games}</p>
 
-                                <p>{(estatisticas.points / estatisticas.games).toFixed(2)} Pts / {(estatisticas.assists / estatisticas.games).toFixed(2)} Ast / {(estatisticas.totReb / estatisticas.games).toFixed(2)} Reb</p>
+                                <p>{(estatisticas.points / estatisticas.games).toFixed(2)} <strong>Pts</strong> / {(estatisticas.assists / estatisticas.games).toFixed(2)} <strong>Ast</strong> / {(estatisticas.totReb / estatisticas.games).toFixed(2)} <strong>Reb</strong></p>
                             
                             </div>
                         
