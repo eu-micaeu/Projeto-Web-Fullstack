@@ -5,7 +5,7 @@ import Context from '../../context/Context';
 import PopUp from '../PopUp/PopUp';
 
 const Main = () => {
-
+    //criação dos "estados" e de suas "funções"
     const [times, setTimes] = useState([]);
 
     const [carregando, setCarregando] = useState(true);
@@ -70,23 +70,24 @@ const Main = () => {
             buscarTimes();
 
             return;
-            //verifica se o termo de pesquisa tem menos de 3 caracteres
+            //verifica se o termo de pesquisa tem menos de 3 caracteres, se tiver,vai ser mostrado um alerta para o usuário
         } else if (timePesquisado.trim().length < 3) {
 
             alert("O termo de busca deve ter pelo menos 3 caracteres");
 
             return;
         }
-
+        //atribuindo a api da nba a url e retorna os dados sobre o time pesquisado da NBA, essa url vai ser usada na requisição
         const url = `https://api-nba-v1.p.rapidapi.com/teams?search=${timePesquisado}`;
-
+        //armazena um objeto com as configurações da requisição HTTP
         const options = {
-
+            //definição do metode de requisição
             method: 'GET',
-
+            //definição dos cabeçalhos
             headers: {
-
+                //chave de autenticação para acessar a API RapidAPI
                 'x-rapidapi-key': '05f2638448msh7eb4366633a637dp1dc4b8jsnb2a6350471af',
+                //define o nomedo host para direcionar a requisição ao serviço correto
                 'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com'
 
             }
@@ -96,44 +97,45 @@ const Main = () => {
         try {
             //tentaiva de fazer uma requisição para a api
             fetch(url, options)
-
-                .then((response) => response.json())// Converte a resposta da API para JSON
+                // Converte a resposta da API para JSON
+                .then((response) => response.json())
 
                 .then((result) => {
-
-                    setTimes(result.response || []);// Atualiza o estado times com os dados recebidos
-
-                    setErro(null);// Reseta o estado de erro, já que a requisição foi bem-sucedida
+                    // Atualiza o estado times com os dados recebidos
+                    setTimes(result.response || []);
+                    // Reseta o estado de erro, já que a requisição foi bem-sucedida
+                    setErro(null);
 
                 })
-
-                .catch((error) => setErro('Erro ao buscar dados'));//Caso ocorra um erro na requisição, é atualizado o estado do erro
-
-        } catch (error) {
-
+                //Caso ocorra um erro na requisição, é atualizado o estado do erro
+                .catch((error) => setErro('Erro ao buscar dados'));
+        
+        } catch (error) {// Captura erros do bloco try
+            // Armazena a mensagem de erro no estado Erro
             setErro(error.message);
 
         }
 
     }
-
+    // Chama a função 'buscarTimes' assim que o componente é montado na tela
     useEffect(() => {
 
         buscarTimes();
 
     }, []);
 
+    // Define uma função memoizada usando useCallback, que só será recriada caso as dependências forem alteradas
     const abrirPopUp = useCallback((time) => {
-
+        // Atualiza o estado com o time selecionado para exibir detalhes no popup
         setTimeSelecionado(time);
-
+        //abre o popip
         setAbrirDialogo(true);
 
     }, []);
 
     if (carregando) {
 
-        return (
+        return ( // Retorna um elemento visual enquanto os dados estão carregando
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}>
 
@@ -144,7 +146,7 @@ const Main = () => {
         );
 
     }
-
+    //// Verifica se há um erro no estado "erro"
     if (erro) return <div>Erro: {typeof erro === 'string' ? erro : erro.message}</div>;
 
     return (
