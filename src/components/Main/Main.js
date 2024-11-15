@@ -146,7 +146,7 @@ const Main = () => {
         );
 
     }
-    //// Verifica se há um erro no estado "erro"
+    // Verifica se há um erro no estado "erro"
     if (erro) return <div>Erro: {typeof erro === 'string' ? erro : erro.message}</div>;
 
     return (

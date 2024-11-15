@@ -1,5 +1,5 @@
 import './Header.css';
-
+// função para o cabeçalho da página
 function Header(){
 
     return (

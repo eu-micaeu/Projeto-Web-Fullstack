@@ -1,5 +1,6 @@
 import './Footer.css';
 
+// função para o rodaé da página,com seu estilo e paragrafo
 function Footer() {
   return (
     <footer>
