@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# aboutBask <img src="./public/icons/logo.png" alt="Logo" width="30">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um projeto criado para a disciplina de Programação Web Full Stack, onde será utilizado o seguimento do SPA - Single Page Application, em que todas as funcionalidades serão
+implementadas em uma unica página HTML, sem a necessidade de redirecionamento entre as páginas para atualização da interface. 
 
-## Available Scripts
+## Membros do Grupo
 
-In the project directory, you can run:
+[Maria Gabriella Victor Gomes Da Silva](https://github.com/gabriellavsx) - 2143364
 
-### `npm start`
+[Micael Ribeiro Rocha](https://github.com/eu-micaeu) - 2454424
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Critérios:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+• Atendimento as diretrizes de desenvolvimento web apresentadas durante as aulas. 
 
-### `npm test`
+• Estrutura do projeto utilizando Webpack/create-react-app ou outra estrutura concordada
+com o professor (por exemplo o Vite).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+• Busca com envio de parametros para a API JSON. 
 
-### `npm run build`
+• Verificação de preenchimento de campos obrigatórios na busca. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+• Apresentação de mensagens de erro de validação antes e depois do envio dos dados para 
+a API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+• Implementação de componentes e comunicação de componentes React.js com a Context
+API ou REDUX.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+• Implementação da funcionalidade/hook selecionado pelo grupo.
 
-### `npm run eject`
+• Uso de uma biblioteca externa selecionada pelo grupo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+• Gerac¸ao do pacote de deployment da aplicação e disponibilização em um servidor web: [aboutBask](https://projeto-web-fullstack.vercel.app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+• Atualização incremental das mudanças de código-fonte no Git.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Imagens da aplicação:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://github.com/user-attachments/assets/89830d9a-7c87-4ea1-be67-5a030492a173)
 
-## Learn More
+<hr>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://github.com/user-attachments/assets/d2703c69-4c17-4aba-9bb8-7f932bd58e82)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<hr>
 
-### Code Splitting
+![image](https://github.com/user-attachments/assets/f146827b-71dd-4477-b26b-a9a07d56f7e2)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Possivéis mensagens de erro:
 
-### Analyzing the Bundle Size
+![image](https://github.com/user-attachments/assets/89ce370b-1ae1-4c22-bf85-020d0b9d3793)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
