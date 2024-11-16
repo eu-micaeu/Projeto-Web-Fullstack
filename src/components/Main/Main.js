@@ -109,7 +109,7 @@ const Main = () => {
                 })
                 //Caso ocorra um erro na requisição, é atualizado o estado do erro
                 .catch((error) => setErro('Erro ao buscar dados'));
-        
+
         } catch (error) {// Captura erros do bloco try
             // Armazena a mensagem de erro no estado Erro
             setErro(error.message);
@@ -172,7 +172,7 @@ const Main = () => {
                     onChange={(e) => setTimePesquisado(e.target.value)}
 
                 />
-                
+
                 <Button
 
                     variant="contained"
@@ -198,23 +198,31 @@ const Main = () => {
 
             <div id='resultados'>
 
-                <ul>
+                {times.filter((time) => time.nbaFranchise === true && time.name !== 'Home Team Stephen A').length === 0 ? (
 
-                    {times
+                    <p>Nenhum time disponível</p>
 
-                        .filter((time) => time.nbaFranchise === true && time.name !== 'Home Team Stephen A')
+                ) : (
 
-                        .map((time) => (
+                    <ul>
 
-                            <li key={time.id} onClick={() => abrirPopUp(time)}>
+                        {times
 
-                                <img src={time.logo} alt={time.name} width={75} height={75} />
+                            .filter((time) => time.nbaFranchise === true && time.name !== 'Home Team Stephen A')
 
-                            </li>
+                            .map((time) => (
 
-                        ))}
+                                <li key={time.id} onClick={() => abrirPopUp(time)}>
 
-                </ul>
+                                    <img src={time.logo} alt={time.name} width={75} height={75} />
+
+                                </li>
+
+                            ))}
+
+                    </ul>
+
+                )}
 
             </div>
 
