@@ -50,4 +50,34 @@ API ou REDUX.
 
 ![image](https://github.com/user-attachments/assets/89ce370b-1ae1-4c22-bf85-020d0b9d3793)
 
+# Como rodar o projeto localmente
 
+### 1. Clonar o repositório
+
+Se ainda não tiver o repositório clonado, use o seguinte comando no terminal:
+
+```bash
+git clone https://github.com/eu-micaeu/Projeto-Web-Fullstack
+```
+
+### 2. Instalar as dependências
+
+Entre na pasta do projeto e instale as dependências do Node.js:
+
+```bash
+npm install
+```
+
+### 3. Rodar o projeto localmente
+
+Após instalar as dependências, execute o projeto com o comando:
+
+```bash
+npm start
+```
+
+Este comando irá rodar o servidor de desenvolvimento e você poderá acessar a aplicação localmente no endereço:
+
+```bash
+http://localhost:3000
+```
