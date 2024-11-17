@@ -30,7 +30,7 @@ API ou REDUX.
 
 • Uso de uma biblioteca externa selecionada pelo grupo.
 
-• Gerac¸ao do pacote de deployment da aplicação e disponibilização em um servidor web: [aboutBask](https://projeto-web-fullstack.vercel.app/)
+• Geração do pacote de deployment da aplicação e disponibilização em um servidor web: [aboutBask](https://projeto-web-fullstack.vercel.app/)
 
 • Atualização incremental das mudanças de código-fonte no Git.
 
