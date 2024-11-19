@@ -66,6 +66,9 @@ const Main = () => {
     function pesquisarTime() {
         // consição que verifica se o tero de pesquisa esta vazio
         if (timePesquisado.trim() === '') {
+
+            setErro(null);
+
             //se tiver vazio, carrega todos os times com as função "buscarTimes()"
             buscarTimes();
 
@@ -73,7 +76,7 @@ const Main = () => {
             //verifica se o termo de pesquisa tem menos de 3 caracteres, se tiver,vai ser mostrado um alerta para o usuário
         } else if (timePesquisado.trim().length < 3) {
 
-            alert("O termo de busca deve ter pelo menos 3 caracteres");
+            setErro('Digite pelo menos 3 caracteres para pesquisar');
 
             return;
         }
@@ -146,8 +149,6 @@ const Main = () => {
         );
 
     }
-    // Verifica se há um erro no estado "erro"
-    if (erro) return <div>Erro: {typeof erro === 'string' ? erro : erro.message}</div>;
 
     return (
 
@@ -195,6 +196,16 @@ const Main = () => {
                 </Button>
 
             </div>
+
+            {erro && (
+
+                <p style={{ color: 'red', marginTop: '10px' }}>
+
+                    Erro: {typeof erro === 'string' ? erro : erro.message}
+
+                </p>
+
+            )}
 
             <div id='resultados'>
 
