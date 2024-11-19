@@ -48,7 +48,7 @@ API ou REDUX.
 
 ## Possivéis mensagens de erro:
 
-![image](https://github.com/user-attachments/assets/89ce370b-1ae1-4c22-bf85-020d0b9d3793)
+![image](https://github.com/user-attachments/assets/3a9c5e35-1aac-49e8-bb6d-4de70c83eab2)
 
 # Como rodar o projeto localmente
 
